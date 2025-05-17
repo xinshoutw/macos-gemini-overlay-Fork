@@ -90,6 +90,6 @@ macos-gemini-overlay --uninstall-startup
 
 ## Final thoughts
 
-  This project was forked from [macos-grok-overlay](https://github.com/tchlux/macos-grok-overlay) and modified to work with Google Gemini.
+  This project was forked from [macos-grok-overlay](https://github.com/tchlux/macos-grok-overlay) and modified to work with Google Gemini. All credits go to the original author.
 
-  This was a small fun weekend project, and is not a product of the xAI team nor is it formally affiliated with them. Please file issues and I'll be happy to adjust, but I also highly recommend you look at the source code yourself if you want to change something. It's a small and simple project that fits in less [than 10K tokens](http://gitingest.com/tchlux/macos-gemini-overlay), Google Gemini (or similar) could easily help you modify it for your own purposes.
+  This was a small fun weekend project, and is not a product of Google Gemini, xAI team nor is it formally affiliated with them.
