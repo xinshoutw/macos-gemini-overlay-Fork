@@ -1,5 +1,5 @@
 # Try to import setuptools (if it fails, the user needs that package)
-try: 
+try:
     from setuptools import setup
 except:
     # Custom error (in case user does not have setuptools)
@@ -21,12 +21,12 @@ def read(f_name, empty_lines=False):
     return text
 
 # Go to the "about" directory in the package directory.
-source_page = "grok"
+source_page = "gemini"
 package_name = f"macos-{source_page}-overlay"
 package_about = os.path.join(os.path.dirname(os.path.abspath(__file__)), package_name.replace("-","_"), "about")
 
 if __name__ == "__main__":
-    #      Read in the package description files     
+    #      Read in the package description files
     # ===============================================
     package = package_name.replace("-", "_")
     version =read("version.txt")[0]

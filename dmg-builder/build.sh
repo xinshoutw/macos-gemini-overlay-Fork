@@ -18,7 +18,7 @@
 
 # ---------------------------------------------------------------------
 #                      Set up your own config.sh
-# 
+#
 # Read in the TEAM_ID
 # echo "Generate a certificate by requesting a new authorized cert from KeychainAccess app on local machine."
 # echo ""
@@ -40,8 +40,8 @@
 # # Profile name is arbitrary
 # KEYCHAIN_PROFILE="macos-2025"
 # # The name of the app
-# APP_NAME="macos-grok-overlay"
-# 
+# APP_NAME="macos-gemini-overlay"
+#
 # ---------------------------------------------------------------------
 
 source config.sh
@@ -82,4 +82,4 @@ spctl -a -vvv -t exec dist/$APP_NAME.app
 # Staple the permissions to the .app
 xcrun stapler staple dist/$APP_NAME.app
 # Create a DMG that provides an easy-installer
-create-dmg --volname "$APP_NAME" --window-size 600 300 --icon-size 100 --app-drop-link 400 150 $APP_NAME.dmg dist/$APP_NAME.app
+create-dmg --volname "$APP_NAME" --window-size 970 750 --icon-size 100 --app-drop-link 400 150 $APP_NAME.dmg dist/$APP_NAME.app

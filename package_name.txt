@@ -1,1 +1,1 @@
-macos-grok-overlay
+macos-gemini-overlay
