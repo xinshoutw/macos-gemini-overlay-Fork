@@ -12,4 +12,11 @@ with open(os.path.join(ABOUT_DIR,"author.txt")) as f:
 
 __all__ = ["main"]
 
-from .main import main
+# Lazily import the real CLI entry‐point to avoid importing it twice when
+# executing with "python -m macos_gemini_overlay.main" (runpy will import the
+# module after the package has already been initialised).
+
+def main(*args, **kwargs):  # noqa: D401 – simple wrapper
+    """Entrypoint wrapper that defers the heavy import until needed."""
+    from .main import main as _main  # local import to prevent early execution
+    return _main(*args, **kwargs)

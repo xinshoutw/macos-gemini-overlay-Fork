@@ -9,7 +9,13 @@ A simple macOS overlay application for pinning <code>gemini.google.com</code> to
 ![Launcher Sample](images/macos-gemini-overlay.png)
 
 
-## Installation:
+## Supported shortcuts within Gemini
+* `Cmd + N` starts a new conversation.
+* `Ctrl + Cmd + S` toggles Sidebar.
+* `Cmd + ,` opens the Settings page (memory).
+
+
+## Installation
 
   The easiest approach is to download and execute the DMG installer (by clicking the image below) to place the program into your Applications folder.
 
@@ -40,6 +46,24 @@ macos-gemini-overlay --install-startup
   And you're done! Now this should launch automatically and constantly run in the background. If you ever decide you do not want it, see the uninstall instructions below.
 
 
+## Usage
+
+  Once the application is launched, it should immediately open a window dedicated to `gemini.google.com`. You'll need to log in there, but you should only need to do that once. After installing, pressing `⌥ + Space` while the window is open will hide it, and pressing it again at any point will reveal it and pin it as the top-most window overlay on top of other applications. This enables quick and easy access to Google Gemini on macOS.
+
+  There is a dropdown menu with basic options that shows when you click the menubar icon. Personally I find that using `⌥ + Space` to summon and dismiss the dialogue as needed is the most convenient.
+
+  If you decide you want to uninstall the application, you can do that by clicking the option in the menubar dropdown, or from the command line with:
+
+```bash
+macos-gemini-overlay --uninstall-startup
+```
+
+
+## How it works
+
+  This is a very thin `pyobjc` application written to contain a web view of the current production Google Gemini website. Most of the logic contained in this small application is for stylistic purposes, making the overlay shaped correctly, resizeable, draggable, and able to be summoned anywhere easily with a single (modifiable) keyboard command. There's also a few steps needed to listen specifically for the `⌥ + Space` keyboard command, which requires Accessibility access to macOS.
+
+
 ## Local development
 
 Clone the repository and install dependencies:
@@ -68,24 +92,6 @@ You can also run tests (if any) with:
 ```bash
 python3 -m unittest discover
 ```
-
-
-## Usage
-
-  Once the application is launched, it should immediately open a window dedicated to `gemini.google.com`. You'll need to log in there, but you should only need to do that once. After installing, pressing `⌥ + Space` while the window is open will hide it, and pressing it again at any point will reveal it and pin it as the top-most window overlay on top of other applications. This enables quick and easy access to Google Gemini on macOS.
-
-  There is a dropdown menu with basic options that shows when you click the menubar icon. Personally I find that using `⌥ + Space` to summon and dismiss the dialogue as needed is the most convenient.
-
-  If you decide you want to uninstall the application, you can do that by clicking the option in the menubar dropdown, or from the command line with:
-
-```bash
-macos-gemini-overlay --uninstall-startup
-```
-
-
-## How it works
-
-  This is a very thin `pyobjc` application written to contain a web view of the current production Google Gemini website. Most of the logic contained in this small application is for stylistic purposes, making the overlay shaped correctly, resizeable, draggable, and able to be summoned anywhere easily with a single (modifiable) keyboard command. There's also a few steps needed to listen specifically for the `⌥ + Space` keyboard command, which requires Accessibility access to macOS.
 
 
 ## Final thoughts
