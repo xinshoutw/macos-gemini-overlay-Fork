@@ -280,7 +280,7 @@ class AppDelegate(NSObject):
             elif key == 'v':
                 self.window.firstResponder().paste_(None)
             # Hide
-            elif key == 'h':
+            elif key == 'h' or key == 'w':
                 self.hideWindow_(None)
             # New Chat (Command+N)
             elif key == 'n':
