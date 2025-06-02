@@ -294,7 +294,7 @@ class AppDelegate(NSObject):
                 """
                 self.webview.evaluateJavaScript_completionHandler_(js, None)
             # Toggle Sidebar (Ctrl+Cmd+S)
-            elif key == 's' and key_control and key_command:
+            elif (key == 's') or (key == 's' and key_control and key_command):
                 js = """
                 (function(){
                   const selectors=[
