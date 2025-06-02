@@ -60,7 +60,7 @@ if __name__ == "__main__":
             description = description,
             # scripts=[os.path.join(package,"setup.py")],
             keywords = keywords,
-            python_requires = '>=3.10',
+            python_requires = '>=3.9',
             license='MIT',
             classifiers=classifiers
         )
